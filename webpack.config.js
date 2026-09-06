@@ -15,7 +15,7 @@ export default {
 
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: '[name].js',
+        filename: '[name].[contenthash].js',
         clean: true,
     },
 
