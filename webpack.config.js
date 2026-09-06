@@ -17,8 +17,13 @@ export default {
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: '[name].[contenthash].js',
-        assetModuleFilename: 'assets/[name].[contenthash][ext]',
         clean: true,
+    },
+
+    optimization: {
+        splitChunks: {
+            chunks: 'all',
+        },
     },
 
     module: {
@@ -30,6 +35,16 @@ export default {
             {
                 test: /\.(png|svg|jpg|jpeg|gif)$/i,
                 type: 'asset/resource',
+                generator: {
+                    filename: 'assets/images/[name].[contenthash][ext]',
+                },
+            },
+            {
+                test: /\.(woff|woff2|eot|ttf|otf)$/i,
+                type: 'asset/resource',
+                generator: {
+                    filename: 'assets/fonts/[name].[contenthash][ext]',
+                },
             },
         ],
     },
