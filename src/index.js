@@ -1,5 +1,6 @@
 import Post from './post.js'
 import { createStatistics } from './statistics.js'
+import './styles.css'
 
 console.log('Webpack works!')
 

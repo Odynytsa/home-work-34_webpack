@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #cdd6f4;
+    background: linear-gradient(-45deg, #1e1e2e, #313244, #45475a, #1e1e2e);
+    background-size: 400% 400%;
+    animation: bg-pan 15s ease infinite;
+}
+
+@keyframes bg-pan {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.container {
+    position: relative;
+    max-width: 640px;
+    width: calc(100% - 2rem);
+    padding: 3rem 2.5rem;
+    text-align: center;
+    background: rgba(17, 17, 27, 0.55);
+    border: 1px solid rgba(137, 180, 250, 0.25);
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(12px);
+    overflow: hidden;
+    animation: card-in 0.7s ease both;
+}
+
+@keyframes card-in {
+    from {
+        opacity: 0;
+        transform: translateY(24px) scale(0.98);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #89b4fa, #cba6f7, #f38ba8, #89b4fa);
+    background-size: 300% 100%;
+    animation: bg-pan 6s linear infinite;
+}
+
+.container::after {
+    content: '';
+    position: absolute;
+    top: -80px;
+    right: -80px;
+    width: 220px;
+    height: 220px;
+    background: radial-gradient(circle, rgba(203, 166, 247, 0.25) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.container h1 {
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+    background: linear-gradient(90deg, #89b4fa, #cba6f7);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 2rem 1.25rem;
+    }
+
+    .container h1 {
+        font-size: 1.75rem;
+    }
+}
