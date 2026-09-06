@@ -19,3 +19,5 @@ export function createStatistics() {
         }
     }
 }
+
+window.statistics = createStatistics()
