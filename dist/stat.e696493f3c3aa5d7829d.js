@@ -1,1 +1,0 @@
-(()=>{"use strict";window.statistics=function(){let t=0,e=!1;const s=()=>t++;return document.addEventListener("click",s),{destroy:()=>(document.removeEventListener("click",s),e=!0,"Statistics fully destroyed"),getClicks:()=>e?"Statistics is destroyed":t}}()})();

@@ -127,3 +127,27 @@ body {
     }
 }
 
+.lead{margin-top:1rem;line-height:1.6;color:#bac2de}.lead strong{background:linear-gradient(90deg, #89b4fa, #cba6f7);-webkit-background-clip:text;background-clip:text;color:rgba(0,0,0,0)}
+.features {
+  list-style: none;
+  margin-top: 1.25rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+}
+.features li {
+  padding: 0.4rem 0.9rem;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  border-radius: 999px;
+  color: #89b4fa;
+  background: rgba(137, 180, 250, 0.08);
+  border: 1px solid rgba(137, 180, 250, 0.35);
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+.features li:hover {
+  transform: translateY(-2px);
+  background: rgba(137, 180, 250, 0.16);
+}
+
