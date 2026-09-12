@@ -2,11 +2,12 @@ import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
 import MiniCssExtractPlugin from 'mini-css-extract-plugin'
+import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer'
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 
-export default {
+export default (env = {}) => ({
     mode: 'development',
 
     entry: {
@@ -87,7 +88,15 @@ export default {
         new MiniCssExtractPlugin({
             filename: '[name].[contenthash].css',
         }),
+        ...(env.analyzer
+            ? [
+                    new BundleAnalyzerPlugin({
+                        analyzerMode: 'static',
+                        openAnalyzer: false,
+                    }),
+                ]
+            : []),
     ],
-};
+});
 
 
