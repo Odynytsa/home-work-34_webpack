@@ -35,6 +35,10 @@ export default {
         },
     },
 
+    resolve: {
+        extensions: ['.tsx', '.ts', '.js'],
+    },
+
     module: {
         rules: [
             {
@@ -48,6 +52,11 @@ export default {
             {
                 test: /\.less$/i,
                 use: [MiniCssExtractPlugin.loader, 'css-loader', 'less-loader'],
+            },
+            {
+                test: /\.tsx?$/i,
+                use: 'ts-loader',
+                exclude: /node_modules/,
             },
             {
                 test: /\.(png|svg|jpg|jpeg|gif)$/i,

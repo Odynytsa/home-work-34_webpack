@@ -1,4 +1,4 @@
-import Post from './post.js'
+import Post from './post.ts'
 import join from 'lodash/join.js'
 import './styles.css'
 import './styles/theme.scss'
