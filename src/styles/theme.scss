@@ -1,0 +1,21 @@
+// SCSS demo: variables, mixin, nesting
+$text-muted: #bac2de;
+$accent: #89b4fa;
+$accent-soft: #cba6f7;
+
+@mixin gradient-text {
+    background: linear-gradient(90deg, $accent, $accent-soft);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.lead {
+    margin-top: 1rem;
+    line-height: 1.6;
+    color: $text-muted;
+
+    strong {
+        @include gradient-text;
+    }
+}

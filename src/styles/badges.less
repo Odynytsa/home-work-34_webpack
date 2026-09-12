@@ -1,0 +1,32 @@
+// LESS demo: variables, parametric mixin, nesting, color function
+@pill-color: #89b4fa;
+@pill-bg: rgba(137, 180, 250, 0.08);
+
+.pill() {
+    padding: 0.4rem 0.9rem;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    border-radius: 999px;
+}
+
+.features {
+    list-style: none;
+    margin-top: 1.25rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+
+    li {
+        .pill();
+        color: @pill-color;
+        background: @pill-bg;
+        border: 1px solid fade(@pill-color, 35%);
+        transition: transform 0.2s ease, background 0.2s ease;
+
+        &:hover {
+            transform: translateY(-2px);
+            background: rgba(137, 180, 250, 0.16);
+        }
+    }
+}

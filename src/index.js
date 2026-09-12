@@ -1,6 +1,8 @@
 import Post from './post.js'
 import join from 'lodash/join.js'
 import './styles.css'
+import './styles/theme.scss'
+import './styles/badges.less'
 import logoUrl from './assets/logo.svg'
 
 console.log('Webpack works!')

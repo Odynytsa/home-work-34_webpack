@@ -110,31 +110,6 @@ body {
     color: #a6adc8;
 }
 
-.lead {
-    margin-top: 1rem;
-    line-height: 1.6;
-    color: #bac2de;
-}
-
-.features {
-    list-style: none;
-    margin-top: 1.25rem;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    justify-content: center;
-}
-
-.features li {
-    padding: 0.4rem 0.9rem;
-    font-size: 0.8rem;
-    letter-spacing: 1px;
-    color: #89b4fa;
-    background: rgba(137, 180, 250, 0.08);
-    border: 1px solid rgba(137, 180, 250, 0.35);
-    border-radius: 999px;
-}
-
 @media (max-width: 600px) {
     .container {
         padding: 2rem 1.25rem;
