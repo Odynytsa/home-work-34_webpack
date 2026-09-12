@@ -59,6 +59,11 @@ export default {
                 exclude: /node_modules/,
             },
             {
+                test: /\.m?js$/i,
+                use: 'babel-loader',
+                exclude: /node_modules/,
+            },
+            {
                 test: /\.(png|svg|jpg|jpeg|gif)$/i,
                 type: 'asset/resource',
                 generator: {
