@@ -13,6 +13,15 @@ export default {
         main: './src/index.js',
         stat: './src/statistics.js',
     },
+    target: "web",
+    devServer: {
+        static: './dist',
+        compress: true,
+        port: 4200,
+        open: true,
+        hot: true,
+    },
+    
 
     output: {
         path: path.resolve(__dirname, 'dist'),
